@@ -1,38 +1,240 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  height: 100vh;
+  width: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header{
+  padding: 0 200px 0 150px;
+  top: 0;
+  width: 100%;
+  background-color: #032541;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+.header a{
+  color: #f3f3f3;
+  font-size: larger;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 10px;
+  list-style: none;
+  text-decoration: none;
+  transition: all 0.3s ease;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+.header a:hover {
+  opacity: 0.7;
+}
+.fas{
+  background-color:  #00A0CF;
+  padding: 5px 8px;
+  border-radius: 4px;
+  color: #f3f3f3;
+  font-size: large;
+  margin-left: 10px;
+}
+.fas:hover{
+  background-color: #1aa762;
+  opacity: 1;
+  cursor: pointer;
+}
+.mainSection{
+  display: flex;
+  justify-content: center;
+  height: 45vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://image.tmdb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/u0BDggs80FG9tyZwxWTzVTDQls0.jpg");
+}
+.sectionContent{
+  width: 90%;
+}
+.sectionTitle{
+  color: white;
+  margin-top: 50px;
+}
+.sectionTitle h1{
+  font-size: 50px;
+}
+.sectionTitle h2{
+  font-size: 26px;
+}
+.sectionSearch{
+  margin-top: 55px;
+}
+.sectionForm{
+  background-color: #00A0CF;
+}
+#searchInput{
+  color: rgba(0,0,0,.5);
+  width: 90%;
+  height: 46px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 30px;
+}
+#searchInput:focus{
+  outline: none;
+  border: none;
+}
+#getInput{
+  cursor: pointer;
+  position: relative;
+  right: 50px;
+  color:white;
+  background-image: linear-gradient(to right, #62cec3 0%, #1eaabc 100%);  width: 10%;
+  height: 45px;
+  padding: 10px 26px;
+  font-size: 1.1em;
+  font-weight: 500;
+  border: none;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+#getInput:hover{
+  color: black;
+}
+.resultBar{
+  width: 85%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.results{
+  margin-bottom: 20px;
+  list-style: none;
+}
+.cardContainer{
+  display: flex;
+}
+.item1{
+  display: flex;
+  flex-basis: 15%;
+}
+.item2{
+  flex-basis: 50%;
+}
+.item3{
+  flex-basis: 35%;
+}
+.cardImg img{
+  height: 300px;
+  border-radius: 8px;
+}
+.cardContent{
+ width: max-content;
+ padding-left: 20px;
+}
+.cardContent p{
+  font-size: x-large;
+}
+.cardButtons button{
+  background-color: #00A0CF;
+  color: #f3f3f3;
+  width: 48.7%;
+  height: 100%;
+  margin-left: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight:bolder;
+  border-radius: 8px;
+  transition: 0.4s;
+}
+.cardButtons button:hover{
+  background-color: #1aa762;
+}
+.Watchlistcontainer{
   display: flex;
   flex-direction: column;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.listTop{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+}
+.listTop h2{
+  font-size: xx-large;
+}
+.listHowMany{
+  display: block;
+  margin-right: 40px;
+  color: #f3f3f3;
+  background-color: #00A0CF;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 7px 15px 5px 15px;
+}
+.listWatching{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.listMovies img{
+  width: 250px;
+  height: 400px;
+}
+.listRaiting{
   align-items: center;
+  background-color: rgba(0,160,207,.5);
+  border-radius: 100%;
+  color: #fff;
+  display: flex;
+  font-size: 15px;
+  height: 35px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  left: 200px;
+  top: -393px;
+  width: 35px;
 }
-
-.App-link {
-  color: #61dafb;
+.listMovies button{
+  display: none;
+  color: #f3f3f3;
+  background-color: #032541;
+  font-weight: bold;
+  position: relative;
+  top: -90px;
+  left: 80px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.listMovies button:hover{
+  font-weight: bolder;
+  color:#032541;
+  background-color: #f3f3f3;
+}
+.watchlistBtn{
+  font-size: medium;
+  padding: 5px 10px;
+}
+.firtBtn{
+  font-size: large;
+  padding: 5px;
+}
+.listMovies{ height: 405px; margin-bottom: 30px; border-radius: 5px;} 
+.listMovies:hover{
+  border: #00A0CF 3px solid;
+}
+.listMovies:hover .addhover{
+  display: inline;
 }
